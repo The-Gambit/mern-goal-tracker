@@ -9,7 +9,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
 	if (!name || !email || !password) {
 		res.status(400);
-		throw errorHandler(`Please provide a name, email and password`);
+		throw new Error(`Please provide a name, email and password`);
 	}
 
 	const user_exists = await User.findOne({ email })

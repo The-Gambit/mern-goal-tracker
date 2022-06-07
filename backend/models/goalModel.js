@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-
 const goal_schema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
@@ -13,9 +12,8 @@ const goal_schema = mongoose.Schema({
     },
 }
     , {
-        timeStamps: true,
+        timestamps: true,
     }
 )
-
 
 module.exports = mongoose.model("Goal", goal_schema);

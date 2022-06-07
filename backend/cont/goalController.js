@@ -1,5 +1,6 @@
 const asyncHandler = require('express-async-handler');
 const Goal = require('../models/goalModel');
+const User = require('../models/userModel');
 
 const getGoals = asyncHandler(async (req, res) => {
     const goals = await Goal.find({user: req.user.id});
@@ -30,7 +31,7 @@ const updateGoal = asyncHandler(async (req, res) => {
         throw new Error("Goal not found")
     }
 
-    const user = await User.findById(req.user.id);   
+    const user = await User.findById(req.user.id);    
     if (!user){
         req.status(401);
         throw new Error("User not found")
