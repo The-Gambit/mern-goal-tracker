@@ -87,7 +87,7 @@ export const GoalsList = () => {
         <div className="goals" >
 
             <section className="content">
-                {goals.length > 0 ? goals.map(goal => <GoalItem key={goal._id} goal={goal} deleteGoal={deleteGoal} />) :
+                {goals?.length > 0 ? goals.map(goal => <GoalItem key={goal._id} goal={goal} deleteGoal={deleteGoal} />) :
                     <h3>You have not set any goals</h3>}
             </section>
 

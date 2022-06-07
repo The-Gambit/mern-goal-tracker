@@ -46,7 +46,7 @@ export const GoalForm = () => {
         }
 
     }
-    
+
     if (isLoading) {
         return (
             isLoading ?
@@ -60,7 +60,7 @@ export const GoalForm = () => {
         <section className="form">
             <form onSubmit={onSubmit}>
                 <div className="form-group">
-                    <label htmlFor="text">Goal</label>
+                    <label htmlFor="text">Enter Goal:</label>
                     <input type="text" value={text} onChange={onChange} />
                 </div>
                 <div className="form-group">

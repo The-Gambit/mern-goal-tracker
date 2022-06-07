@@ -22,10 +22,9 @@
   "scripts": {
     "start": "node ./backend/server.js",
     "server": "nodemon ./backend/server.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "client": "npm start --prefix frontend"
+    "client": "npm start --prefix frontend",
+    "build" : "react-scripts build",
+    "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "eslintConfig": {
     "extends": [
@@ -50,8 +49,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "proxy" : "http://localhost:8000",
-  "engines" : {
-    "node" : "16.15.0"
+  "proxy": "http://localhost:8000",
+  "engines": {
+    "node": "16.15.0"
   }
 }
